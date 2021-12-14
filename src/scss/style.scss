@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+@use "variables" as vars;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  color: vars.$font_color;
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", Meiryo, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: vars.$font_color;
+}
+
+/*-------------------------------------------
+content
+-------------------------------------------*/
+.content {
+  display: flex;
+  margin-bottom: 60px;
+
+  @media (max-width: 834px) {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 50%;
+
+    @media (max-width: 834px) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      vertical-align: bottom;
+
+      @media (max-width: 834px) {
+        height: auto;
+      }
+    }
+  }
+
+  .recipe {
+    width: 50%;
+    padding: 40px 5% 0 5%;
+
+    @media (max-width: 834px) {
+      width: 100%;
+    }
+
+    .page-title {
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+    }
+
+    .content-title {
+      font-size: 1.25rem;
+      margin: 40px 0 15px 0;
+      padding-bottom: 5px;
+      border-bottom: 1px solid vars.$font_color;
+    }
+
+    .ingredient-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      dt {
+        width: 85%;
+        border-bottom: 1px dotted vars.$font_color;
+        padding: 6px 0;
+      }
+
+      dd {
+        width: 15%;
+        border-bottom: 1px dotted vars.$font_color;
+        padding: 6px 0;
+        text-align: right;
+      }
+    }
+
+    .step-list {
+      li {
+        padding: 6px 0;
+        border-bottom: 1px dotted vars.$font_color;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+/*-------------------------------------------
+botton
+-------------------------------------------*/
+.botton {
+  text-align: center;
+  margin-bottom: 80px;
+
+  .btn {
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid vars.$font_color;
+    padding: 18px 60px;
+    font-size: 0.875rem;
+  }
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 20px;
+
+  .sns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    li {
+      margin: 0 10px;
+    }
+  }
+}
